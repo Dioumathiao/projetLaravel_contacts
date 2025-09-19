@@ -27,7 +27,7 @@ $request->validate([
 'nom' => 'required|string|max:255',
 'adresse' => 'required|string',
 'telephone' => 'required|string',
-'grib' => 'nullable|string|max:13',
+    'ville' => 'required|string',
 ]);
 
 Contact::create($request->all());
@@ -56,7 +56,7 @@ $request->validate([
 'nom' => 'required|string|max:255',
 'adresse' => 'required|string',
 'telephone' => 'required|string',
-'grib' => 'nullable|string|max:13',
+    'ville' => 'required|string',
 ]);
 
 $contact->update($request->all());

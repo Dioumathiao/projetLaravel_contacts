@@ -19,6 +19,12 @@
     <label>Téléphone :</label>
     <input type="text" name="telephone" value="{{ $contact->telephone }}" required>
 
+    <div class="mb-3">
+        <label for="ville" class="form-label fw-semibold">Ville</label>
+        <input id="ville" type="text" name="ville" class="form-control form-control-lg" value="{{ old('ville', $contact->ville) }}" required>
+    </div>
+
+
     <button type="submit">Enregistrer</button>
 </form>
 

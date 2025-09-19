@@ -11,6 +11,7 @@ class Contact extends Model
         'nom',
         'adresse',
         'telephone',
+        'ville',
     ];
 
     //

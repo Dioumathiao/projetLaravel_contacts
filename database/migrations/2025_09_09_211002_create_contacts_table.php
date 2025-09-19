@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('adresse');
             $table->string('telephone');
-            $table->string('grib', 13)->nullable();
+            $table->string('ville');
             $table->timestamps();
         });
     }
@@ -25,8 +25,10 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->dropColumn('ville');
+        });
     }
 };

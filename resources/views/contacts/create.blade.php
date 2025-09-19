@@ -1,5 +1,8 @@
-<h1>Ajouter un contact</h1>
 
+@extends('layouts.app')
+
+@section('content')
+<h1>Ajouter un contact</h1>
 <form action="{{ route('contacts.store') }}" method="POST">
     @csrf
     <label>Prénom:</label>
@@ -14,5 +17,11 @@
     <label>Téléphone:</label>
     <input type="text" name="telephone" required><br>
 
-       <button type="submit">Enregistrer</button>
+
+    <div class="mb-3">
+        <label>Ville</label>
+        <input type="text" name="ville" class="form-control" required>
+    </div>
+    <button type="submit">Enregistrer</button>
 </form>
+@endsection
